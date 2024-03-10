@@ -63,7 +63,7 @@ body {
 
 
 #anasayfa-foto{
-    height: 580px;
+    height: 645px;
     width: 100%;
     margin-top: 0px;
 }
@@ -71,7 +71,7 @@ body {
 
 #saydamlik{
     width: 100%;
-    height: 580px;
+    height: 645px;
     background-color: black;
     position: absolute;
     margin-top: 0px;
@@ -84,7 +84,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 150px;
+    margin-top: 250px;
 }
 
 #logo{
