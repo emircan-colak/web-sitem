@@ -111,6 +111,12 @@ a:visited {
     color: whitesmoke;
 }
 
+@media screen and (max-width:376px){
+    #search{
+        width: 150px !important;
+    }
+}
+
 
 ::placeholder {
     /* modern browser */
