@@ -1,0 +1,244 @@
+
+
+.login{
+    width: 100px;
+    height: 460px;
+    background-color: rgb(18, 21, 24);
+    border-radius: 10px;
+}
+
+h4{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 40px;
+    display: block;
+    margin-bottom: 0;
+}
+p{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+form{
+    margin-left: 50px;
+    color: white;
+}
+
+.input{
+    background-color: rgb(43, 43, 46);
+    border-radius: 8px;
+    border-color: rgb(243, 156, 18);
+    width: 90%;
+    height: 35px;
+    color: white;
+    margin-top: 7px;
+}
+
+.button{
+    font-size: 15px;
+    width: 90%;
+    height: 40px;
+    border-radius: 9px;
+    color: white;
+    background-color: rgb(243, 156, 18);
+}
+
+#dsew{
+    border-radius: 10px;
+}
+
+
+.sidebar-link{
+    background-color: rgb(22, 22, 22);
+    color: #FBBF24;
+    margin-left: 15px;
+    width: 280px;
+    height: 40px;
+    text-decoration: none;
+}
+
+.sidebar-link.active{   
+    color: #FBBF24;
+}
+a:hover{
+    color: #FBBF24;
+}
+
+a:visited {
+    color: #FBBF24;
+}
+
+#orders-number{
+    color: #FBBF24;
+    border-radius: 7px;
+    border: 1px solid #FBBF24;
+    width: 35px;
+    height: 23px;
+}
+
+.sidebar-link-ana{
+    color: #FBBF24;
+}
+.sidebar-link-ana.active{   
+    color: #FBBF24;
+}
+
+#sign-out{
+    color: white;
+    border: 5px solid #FBBF24;
+    border-radius: 7px;
+    background-color:#FBBF24;
+    font-size: 16px;
+}
+
+#sign-in{
+    color: white;
+    border: 5px solid #FBBF24;
+    border-radius: 7px;
+    background-color:#FBBF24;
+    font-size: 16px;
+}
+
+#search{
+    background-color: rgb(33, 37, 41);
+    border: 1px solid rgb(108, 108, 108);
+    border-radius: 7px;
+    width: 300px;
+    float: right;
+    color: whitesmoke;
+}
+
+
+::placeholder {
+    /* modern browser */
+    color:  white;
+}
+
+.rightbar{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 6px;
+}
+
+.rightbar a {
+    padding: 10px 400px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.rightbar a:hover {
+    color: #f1f1f1;
+}
+
+.closebutton{
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-right: 50px;
+}
+
+.content2 {
+    transition: margin-right .5s;
+    padding: 16px;
+}
+
+#rightsmallbar{
+    color: white;
+}
+#rightsmallbar:hover{
+    color: #818181;
+}
+
+#side{
+    width: 300px;
+    height: 650px; 
+    display: flex;
+    padding-left: 0;
+}
+
+#pshop{
+    position: absolute; padding-left: 18px; padding-top: 84px; font-size: 16px;
+}
+
+#first-c-div{
+    height: 250px;
+}
+
+#first-m-div{
+    border-radius: 15px;
+    width: 30%;
+    height: 100px;
+}
+
+#menu{
+    height: 250px;
+}
+
+@media screen and (max-width:1200px) {
+    #first-m-div{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width:985px) {
+    #first-m-div{
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width:376px) {
+    #first-m-div{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width:1200px){
+     #menu{
+        width: 300px;
+        height: 400px;
+     }
+}
+
+
+
+
+.mobile-menu-icon {
+    display: none; /
+}
+
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        display: none !important; 
+    }
+
+    .mobile-menu-icon {
+        display: block; 
+    }
+}
+
+#denemee{
+    display: flex;
+    float: left;
+    background-color: gray;
+    width: 330px;
+    height: 330px;
+}
+

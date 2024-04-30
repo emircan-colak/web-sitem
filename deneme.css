@@ -1,0 +1,65 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    font-size: 14px;
+  }
+  
+  @media (min-width: 768px) {
+    html {
+      font-size: 16px;
+    }
+  } 
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100; /* Sidebar should be on top of other content */
+    padding: 48px 0 0; /* Padding at the top to prevent content from being hidden under the navbar */
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1); /* Shadow to make sidebar look like a part of the page */
+  }
+  
+  .sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px); /* Height of the viewport - top padding */
+    padding-top: .5rem;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable sidebar */
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 100; /* Sidebar should be on top of other content */
+      padding: 48px 0 0; /* Padding at the top to prevent content from being hidden under the navbar */
+      box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1); /* Shadow to make sidebar look like a part of the page */
+      width: 250px; /* Width of the sidebar */
+    }
+  }
+  
+  #sidebarCollapse {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    #sidebarCollapse {
+      display: block;
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 101; /* Above the sidebar */
+    }
+    #sidebarCollapse span {
+      background-color: #333;
+      height: 3px;
+      width: 25px;
+      margin-bottom: 5px;
+      display: block;
+    }
+  }
+  
