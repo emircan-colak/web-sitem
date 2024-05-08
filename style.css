@@ -326,9 +326,9 @@ input[type="search"]::placeholder {
     }
 }
 
-@media screen and (max-width:985px) {
-    .first-m-div {
-        width: 80%;
+@media screen and (max-width:935px) {
+    #first-c-div {
+        width: 600px !important;
         margin-bottom: 20px;
     }
 }
@@ -367,6 +367,7 @@ input[type="search"]::placeholder {
     .mobile-menu-icon {
         display: block;
     }
+
 }
 
 #alt-div {
@@ -396,9 +397,13 @@ input[type="search"]::placeholder {
 }
 
 @media screen and (max-width:1200px) {
+    #first-c-div{
+        width: 600px !important;
+    }
+
     #alt-div{
         width: 600px;
-        margin-top: 2000px;
+        margin-top: 200px !important;
     }
 
     #search-left{
@@ -416,9 +421,43 @@ input[type="search"]::placeholder {
     #alt-div{
         width: 400px;
     }
+    #first-c-div{
+        width: 400px !important;
+    }
+}
+
+@media screen and (max-width:600px) {
+    #first-c-div{
+        width: 500px  !important;
+    }
+
+    #alt-div{
+        width: 500px;
+    }
+}
+@media screen and (max-width:500px) {
+    #first-c-div{
+        width: 400px  !important;
+    }
+
+    #alt-div{
+        width: 400px;
+    }
+}
+@media screen and (max-width:430px) {
+    #first-c-div{
+        width: 350px  !important;
+    }
+
+    #alt-div{
+        width: 350px;
+    }
 }
 
 @media screen and (max-width:400px){
+    #first-c-div{
+        width: 300px  !important;
+    }
     #alt-div{
         width: 333px;
         margin-top: 200px !important;
@@ -589,6 +628,12 @@ input[type="search"]::placeholder {
     background-color: rgb(25, 25, 28);
     margin-left: 77px;
 }
+#b-div-bos-2{
+    width: 138px;
+    height: 56px;
+    background-color: rgb(25, 25, 28);
+    margin-left: 53px;
+}
 
 #b-div-2{
     width: 128px;
@@ -689,6 +734,14 @@ input[type="search"]::placeholder {
     margin-left: 85px;
 }
 
+#b-o-div-1-repe{
+    width: 90px;
+   border-radius: 5px;
+   border: 1px solid rgb(199, 177, 36);
+    margin-top: 15px;
+    margin-left: 58px;
+}
+
 #spans-tr{
     color: rgb(64, 222, 127);
     text-decoration: none;
@@ -713,6 +766,14 @@ input[type="search"]::placeholder {
     font-size: 14px;
 }
 
+#spans-repe{
+    color: rgb(199, 177, 36);
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
 #tr-svg{
     color: rgb(64, 222, 127);
 }
@@ -724,6 +785,11 @@ input[type="search"]::placeholder {
 
 #star-svg{
     color: rgb(59, 130, 245);
+    margin-bottom: 3px;
+}
+
+#repe-svg{
+    color: rgb(199, 177, 36);
     margin-bottom: 3px;
 }
 
