@@ -452,6 +452,13 @@ input[type="search"]::placeholder {
     #alt-div{
         width: 350px;
     }
+    .huni-btn{
+        margin-left: 300px !important;
+    }
+
+    #search-2{
+        width: 70px !important;
+    }
 }
 
 @media screen and (max-width:400px){
