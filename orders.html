@@ -1,180 +1,775 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <title>Dashboard</title>
 </head>
-<body class="" style="background-color:black; color: white;">
-    <!--navbar START-->
-    <header class="py-3 border-bottom">
-      <div class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 2fr;">
-        <div class="dropdown">
 
-          <div class="mobile-menu-icon">
-            <div class="menu-icon d-flex">asdsad</div>
-        </div>
+<body>
+  <!--navbar START-->
+  <header class="py-3">
+    <div class="container-fluid d-grid gap-3 align-items-center" id="first-div">
+      <div class="dropdown" id="nav-file-btn">
 
-          <a style="color: white;" href="anaSayfa.html" class="d-flex align-items-center col-lg-4 mb-2 mb-lg-0 text-decoration-none" aria-expanded="false">
-          <p style="font-size: 20px;"><i>Filament</i></p>
+
+        <button id="sidebarToggleBtn">☰</button>
+
+
+        <a style="color: white;" href="anaSayfa.html"
+          class="d-flex align-items-center col-lg-4 mb-2 mb-lg-0 text-decoration-none" aria-expanded="false">
+          <p id="fila-font"><i>Filament</i></p>
+        </a>
+      </div>
+
+      <div class="d-flex align-items-center" id="search-div">
+        <form class="w-100 me-3" role="search">
+          <input type="search" id="search" placeholder="Search" aria-label="Search">
+        </form>
+
+
+        <div class="flex-shrink-0 dropdown">
+          <a href="#" id="human-icon" class="d-block  text-decoration-none dropdown-toggle"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="20" fill="currentColor" class="bi bi-person-fill"
+              viewBox="0 0 16 16">
+              <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+            </svg>
           </a>
-        </div>
-  
-        <div class="d-flex align-items-center">
-          <form class="w-100 me-3" role="search">
-            <input type="search" id="search" class="form-control" placeholder="Search..." aria-label="Search">
-          </form>
-        
-         
-          <div class="flex-shrink-0 dropdown">
-            <a href="#" style="color: white; padding-right: 20px;" class="d-block  text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="20" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
-              </svg>
-            </a>
-            <ul style="background-color: black;" class="dropdown-menu text-small shadow">
-              <li><a id="rightsmallbar" class="dropdown-item" href="#">New project...</a></li>
-              <li><a id="rightsmallbar" class="dropdown-item" href="#">Settings</a></li>
-              <li><a id="rightsmallbar" class="dropdown-item" href="#">Profile</a></li>
-              <li><hr style="background-color: white;" class="dropdown-divider"></li>
-              <li><a id="rightsmallbar" class="dropdown-item" href="index.html">Sign out</a></li>
-            </ul>
-          </div>
+          <ul style="background-color: black;" class="dropdown-menu text-small shadow">
+            <li><a class="dropdown-item rightsmallbar" href="#">New project...</a></li>
+            <li><a class="dropdown-item rightsmallbar" href="#">Settings</a></li>
+            <li><a class="dropdown-item rightsmallbar" href="#">Profile</a></li>
+            <li>
+              <hr class="dropdown-divider bg-white">
+            </li>
+            <li><a class="dropdown-item rightsmallbar" href="index.html">Sign out</a></li>
+          </ul>
         </div>
       </div>
-    </header>
-    <!--navbar END-->
+    </div>
+  </header>
+  <!--navbar END-->
 
-    
-   <div class="container-fluid"> 
+
+  <div class="container-fluid">
     <div class="row">
 
       <!--sidebar START-->
-    <div class="sidebar-sticky pt-3 sidebar collapse" id="side" id="sidebar">
-      <div class="sidebar-sticky">
-      <ul class="nav flex-column">
-        <li class="nav-item">
-          <a id="Dashboard"  class="nav-link active text-white pt-3" href="anaSayfa.html" >
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" fill="currentColor" class="bi bi-house-door text-white-50" viewBox="0 0 16 16">
-              <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"/>
-            </svg>
-            Dashboard <span class="sr-only"></span>
-          </a>
-        </li><br><br>
-        <p class="text-white-50" id="pshop">Shop</p><br><br>
-        <li class="nav-item" >
-          <a class="nav-link text-white"  href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" fill="currentColor" class="bi bi-grid text-white-50" viewBox="0 0 16 16">
-              <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5z"/>
-            </svg>
-            Products
-          </a>
-        </li>
-        <li class="nav-item" style="display: flex;">
-          <a class="rounded sidebar-link" href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
-              <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
-            </svg>
-            Orders
-            <p id="orders-number" style="font-size: 13px; display:inline-block; margin-left: 160px;">183</p>
-          </a>
-          
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users text-white-50"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-            Customers
-          </a>
-        </li>
-      </ul><br><br>
-      <p class="text-white-50" style="position: absolute; padding-left: 18px;  font-size: 16px;">Blog</p><br>
+      <div class="sidebar-sticky pt-3 sidebar collapse" id="side">
+        <div class="sidebar-sticky">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a id="Dashboard" class="nav-link active text-white pt-3" href="anaSayfa.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" fill="currentColor"
+                  class="bi bi-house-door text-white-50" viewBox="0 0 16 16">
+                  <path
+                    d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z" />
+                </svg>
+                Dashboard <span class="sr-only"></span>
+              </a>
+            </li><br><br>
+            <p class="text-white-50" id="pshop">Shop</p><br><br>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" fill="currentColor"
+                  class="bi bi-grid text-white-50" viewBox="0 0 16 16">
+                  <path
+                    d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5z" />
+                </svg>
+                Products
+              </a>
+            </li>
+            <li class="nav-item d-flex">
+              <a class="rounded sidebar-link" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" fill="currentColor" class="bi bi-bag"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z" />
+                </svg>
+                Orders
+                <p id="orders-number">183</p>
+              </a>
 
-      <br>
-        
-      <ul class="nav flex-column">
-        <li class="nav-item ">
-          <a class="nav-link text-white" href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text text-white-50"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-            Posts
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" fill="currentColor" class="bi bi-collection text-white-50" viewBox="0 0 16 16">
-              <path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"/>
-            </svg>
-            Categories
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" fill="currentColor" class="bi bi-people text-white-50" viewBox="0 0 16 16">
-              <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4"/>
-            </svg>
-            Authors
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text text-white-50"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-            Links
-          </a>
-        </li>
-      </ul>
-      
-    </div>
-    </div>
-    <!--sidebar END-->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-users text-white-50">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                Customers
+              </a>
+            </li>
+          </ul><br><br>
+          <p class="text-white-50 ps-3" id="blog-p">Blog</p><br>
+
+          <br>
+
+          <ul class="nav flex-column">
+            <li class="nav-item ">
+              <a class="nav-link text-white" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-file-text text-white-50">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+                Posts
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" fill="currentColor"
+                  class="bi bi-collection text-white-50" viewBox="0 0 16 16">
+                  <path
+                    d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z" />
+                </svg>
+                Categories
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" fill="currentColor"
+                  class="bi bi-people text-white-50" viewBox="0 0 16 16">
+                  <path
+                    d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4" />
+                </svg>
+                Authors
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-file-text text-white-50">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+                Links
+              </a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+      <!--sidebar END-->
 
 
-    <div class=" col-sm-12 col-md-9 col-lg-9 mt-5 " id="menu">
-      <div class="row" style="background-color: black;" id="first-c-div">
+      <div class=" col-sm-12 col-md-9 col-lg-9 mt-5 " id="menu">
+        <div class="row" id="first-c-div">
 
-        <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item ps-3"><a href="anaSayfa.html" style="color: rgb(229, 242, 253); text-decoration: none;">Dashboard</a></li>
-            <li class="breadcrumb-item active" aria-current="page" style="color: rgb(229, 242, 253)">Orders</li>
-          </ol>
-        </nav>
-        <h2 class="ps-4">Orders</h2>
-        <div class="col-sm-4 ms-4 bg-dark" id="first-m-div">
-            <p class="d-flex" style="font-size: 16px; padding-left: 10px;">Orders</p>
+          <nav
+            style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
+            aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item ps-3"><a id="dashboard-mini" href="anaSayfa.html">Dashboard</a></li>
+              <li class="breadcrumb-item active" aria-current="page" style="color: rgb(229, 242, 253)">Orders</li>
+            </ol>
+          </nav>
+          <h2 class="ps-4">Orders</h2>
+          <div class="col-sm-4 ms-4 first-m-div">
+            <p class="d-flex first-m-font">Orders</p>
             <h3 class="ps-2">1002</h3>
-        </div>
-        <div class="col-sm-4 ms-4 bg-dark" id="first-m-div">
-            <p class="d-flex" style="font-size: 16px; padding-left: 10px;">Open orders</p>
+          </div>
+          <div class="col-sm-4 ms-4 first-m-div">
+            <p class="d-flex first-m-font">Open orders</p>
             <h3 class="ps-2">188</h3>
-        </div>
-        <div class="col-sm-4 ms-4 bg-dark" id="first-m-div">
-            <p class="d-flex" style="font-size: 16px; padding-left: 10px;">Average price</p>
+          </div>
+          <div class="col-sm-4 ms-4 first-m-div">
+            <p class="d-flex first-m-font">Average price</p>
             <h3 class="ps-2">1,048.74</h3>
+          </div>
         </div>
-      </div>
-    </div>
-    
-    <div class="container  col-sm-12 col-md-9 col-lg-9 mt-5 " id="denemee" style="height: 250px;">
-      <div class="row">
-        asdsa
-      </div>
-    </div>
 
-    
+        <div class="row mt-3 col-lg-9 col-md-9 col-sm-12" id="alt-div">
+          <div class="col-12 d-flex w-100" id="sira-1">
+            <div class="col-5">
+              <select name="select" id="select">
+                <option value>Group by</option>
+                <option value="order-date">Order Date</option>
+              </select>
+            </div>
+            <div class="col-5 d-flex">
+              <div id="search-left"><svg id="search-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                </svg></div>
+              <input id="search-2" type="search" placeholder="Search">
+            </div>
+            <div class="col-1">
+              <button class="huni-btn">
+                <span class="d-flex">
 
+                  <svg class="huni-svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-funnel-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5z" />
+                  </svg>
+
+                  <div>
+                    <p id="huni-svg-number">0</p>
+                  </div>
+
+                </span>
+              </button>
+            </div>
+
+            <div class="col-1">
+              <button class="columns-btn">
+                <span>
+                  <svg id="columns-svg" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                    class="bi bi-grid-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5z" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          
+            <table id="table">
+              <thead class="d-flex" id="thead">
+                <tr>
+                <th id="th-0" class="d-flex">
+                  <div id="th-0-div">
+                      <input type="checkbox">
+                  </div>
+                
+                  <button id="th-btn-number">
+                    <span class="th-size">Number</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+                    </svg>
+                  </button>
+
+                  <button id="customer" >
+                    <span class="th-size">Customer</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+                    </svg>
+                  </button>
+
+                  <span id="status">
+                    Status
+                  </span>
+
+                  <button class="th-btn">
+                    <span class="th-size">Currency</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+                    </svg>
+                  </button>
+
+                  <button class="th-btn">
+                    <span class="th-size">Total price</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+                    </svg>
+                  </button>
+
+                  <button class="th-btn">
+                    <span class="th-size">Shipping cost</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+                    </svg>
+                  </button>
+
+                  <span id="status">Order Date</span>
+                </th>
+              </tr>
+              </thead>
+
+              <tbody>
+              <tr id="th-1">
+                <td>
+                  <div id="th-1-div">
+                    <input type="checkbox">
+                </div>
+              </td>
+
+                <td id="b-div-2">
+                  <div class="">
+                    <a class="spans" href="#">
+                      <div class="">
+                        <div id="b-o-div-2">
+                          <span class="spans">OR517706</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+
+                <td id="b-div">
+                  <div class="">
+                    <a class="spans" href="">
+                      <div class="">
+                        <div id="b-o-div-3">
+                          <span class="spans">Prof. Madelyn Sporer DDS</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+
+                <td id="b-div-2">
+                  <div class="">
+                    <a class="spans" href="">
+                      <div class="">
+                        <div id="b-o-div-1-tr">
+                          <svg id="tr-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
+                            <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
+                          </svg>
+                          <span id="spans-tr">Shipped</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+
+                <td class="b-div">
+                  <div>
+                    <a class="spans" href="">
+                      <div>
+                        <div id="b-o-div-4">
+                          <span class="spans">Moldovan Leu</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+
+                <td class="b-div">
+                  <div>
+                    <a class="spans" href="">
+                      <div>
+                        <div id="b-o-div-5">
+                          <span class="spans">545.93</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+
+                <td class="b-div">
+                  <div>
+                    <a class="spans" href="">
+                      <div>
+                        <div id="b-o-div-6">
+                          <span class="spans">208.90</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+
+                <td class="b-div">
+                  <div>
+                    <a class="spans" href="">
+                      <div>
+                        <div id="b-o-div-7">
+                          <span class="spans">Jul 16, 2023</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+
+                <td id="b-div-edit">
+                  <div>
+                    <a class="spans" href="">
+                      <div>
+                        <div id="b-o-div-8">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                            <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                            <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                          </svg>
+                          <span class="spans-edit">Edit</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+                
+              </tr>
+
+              <tr id="th-1">
+                <td>
+                  <div id="th-1-div">
+                    <input type="checkbox">
+                </div>
+              </td>
+
+                <td id="b-div-2">
+                  <div class="">
+                    <a class="spans" href="#">
+                      <div class="">
+                        <div id="b-o-div-2">
+                          <span class="spans">OR456572</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+
+                <td id="b-div">
+                  <div class="">
+                    <a class="spans" href="">
+                      <div class="">
+                        <div id="b-o-div-3">
+                          <span class="spans">Saul Marquardt</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+
+                <td id="b-div-2">
+                  <div class="">
+                    <a class="spans" href="">
+                      <div class="">
+                        <div id="b-o-div-1-can">
+                          <svg id="can-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"/>
+                          </svg>
+                          <span id="spans-can">Cancelled</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+
+                <td id="b-div-bos">
+                  <div>
+                    <a class="spans" href="">
+                      <div>
+                        <div id="b-o-div-4">
+                          <span class="spans"></span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+
+                <td class="b-div">
+                  <div>
+                    <a class="spans" href="">
+                      <div>
+                        <div id="b-o-div-5">
+                          <span class="spans">1676.31</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+
+                <td class="b-div">
+                  <div>
+                    <a class="spans" href="">
+                      <div>
+                        <div id="b-o-div-6">
+                          <span class="spans">336.26</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+
+                <td class="b-div">
+                  <div>
+                    <a class="spans" href="">
+                      <div>
+                        <div id="b-o-div-7">
+                          <span class="spans">Dec 23, 2023</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+
+                <td id="b-div-edit">
+                  <div>
+                    <a class="spans" href="">
+                      <div>
+                        <div id="b-o-div-8">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                            <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                            <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                          </svg>
+                          <span class="spans-edit">Edit</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+                
+              </tr>
+
+              <tr id="th-1">
+                <td>
+                  <div id="th-1-div">
+                    <input type="checkbox">
+                </div>
+              </td>
+
+                <td id="b-div-2">
+                  <div class="">
+                    <a class="spans" href="#">
+                      <div class="">
+                        <div id="b-o-div-2">
+                          <span class="spans">OR463316</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+
+                <td id="b-div">
+                  <div class="">
+                    <a class="spans" href="">
+                      <div class="">
+                        <div id="b-o-div-3">
+                          <span class="spans">Connie Yundt</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+
+                <td id="b-div-2">
+                  <div class="">
+                    <a class="spans" href="">
+                      <div class="">
+                        <div id="b-o-div-1-star">
+                          <svg id="star-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-stars" viewBox="0 0 16 16">
+                            <path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.73 1.73 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.73 1.73 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.73 1.73 0 0 0 3.407 2.31zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"/>
+                          </svg>
+                          <span id="spans-star">New</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+
+                <td id="b-div-bos-1">
+                  <div>
+                    <a class="spans" href="">
+                      <div>
+                        <div id="b-o-div-4">
+                          <span class="spans"></span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+
+                <td class="b-div">
+                  <div>
+                    <a class="spans" href="">
+                      <div>
+                        <div id="b-o-div-5">
+                          <span class="spans">1912.46</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+
+                <td class="b-div">
+                  <div>
+                    <a class="spans" href="">
+                      <div>
+                        <div id="b-o-div-6">
+                          <span class="spans">233.39</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+
+                <td class="b-div">
+                  <div>
+                    <a class="spans" href="">
+                      <div>
+                        <div id="b-o-div-7">
+                          <span class="spans">May 10, 2023</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+
+                <td id="b-div-edit">
+                  <div>
+                    <a class="spans" href="">
+                      <div>
+                        <div id="b-o-div-8">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                            <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                            <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                          </svg>
+                          <span class="spans-edit">Edit</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+
+
+              <tr id="th-1">
+                <td>
+                  <div id="th-1-div">
+                    <input type="checkbox">
+                </div>
+              </td>
+
+                <td id="b-div-2">
+                  <div class="">
+                    <a class="spans" href="#">
+                      <div class="">
+                        <div id="b-o-div-2">
+                          <span class="spans">OR631653</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+
+                <td id="b-div">
+                  <div class="">
+                    <a class="spans" href="">
+                      <div class="">
+                        <div id="b-o-div-3">
+                          <span class="spans">Raegan Connelly</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+
+                <td id="b-div-2">
+                  <div class="">
+                    <a class="spans" href="">
+                      <div class="">
+                        <div id="b-o-div-1-tr-2">
+                          <svg id="tr-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
+                            <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
+                          </svg>
+                          <span id="spans-tr">Shipped</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+
+                <td id="b-div-1">
+                  <div>
+                    <a class="spans" href="">
+                      <div>
+                        <div id="b-o-div-4">
+                          <span class="spans">Australlian Dollar</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+
+                <td class="b-div">
+                  <div>
+                    <a class="spans" href="">
+                      <div>
+                        <div id="b-o-div-5">
+                          <span class="spans">1932.82</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+
+                <td class="b-div">
+                  <div>
+                    <a class="spans" href="">
+                      <div>
+                        <div id="b-o-div-6">
+                          <span class="spans">193.37</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+
+                <td class="b-div">
+                  <div>
+                    <a class="spans" href="">
+                      <div>
+                        <div id="b-o-div-7">
+                          <span class="spans">Apr 25, 2024</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+
+                <td id="b-div-edit">
+                  <div>
+                    <a class="spans" href="">
+                      <div>
+                        <div id="b-o-div-8">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                            <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                            <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                          </svg>
+                          <span class="spans-edit">Edit</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+                
+              </tr>
+              </tbody>
+            </table>
+          
+
+        </div>
+
+      </div>
+
+
+
+
+
+
+    </div>
   </div>
-  </div> 
 
 
-    <script  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>
