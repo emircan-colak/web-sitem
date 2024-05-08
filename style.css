@@ -608,6 +608,13 @@ input[type="search"]::placeholder {
     background-color: rgb(25, 25, 28);
 }
 
+.b-div-customer{
+    width: 138px;
+    height: 56px;
+    background-color: rgb(25, 25, 28);
+    margin-right: 23px;
+}
+
 #b-div-1{
     width: 138px;
     height: 56px;
@@ -619,24 +626,31 @@ input[type="search"]::placeholder {
     width: 138px;
     height: 56px;
     background-color: rgb(25, 25, 28);
-    margin-left: 64px;
+   
 }
 
 #b-div-bos-1{
     width: 138px;
     height: 56px;
     background-color: rgb(25, 25, 28);
-    margin-left: 77px;
+  
 }
 #b-div-bos-2{
     width: 138px;
     height: 56px;
     background-color: rgb(25, 25, 28);
-    margin-left: 53px;
+   
 }
 
-#b-div-2{
+.b-div-2{
+    float: right;
     width: 128px;
+    height: 56px;
+    background-color: rgb(25, 25, 28);
+}
+
+.b-div-currency{
+    width: 138px;
     height: 56px;
     background-color: rgb(25, 25, 28);
 }
@@ -715,7 +729,7 @@ input[type="search"]::placeholder {
    border-radius: 5px;
    border: 1px solid rgb(64, 222, 127);
     margin-top: 15px;
-    margin-left: 62px;
+    margin-left: 10px;
 }
 
 #b-o-div-1-can{
@@ -723,7 +737,7 @@ input[type="search"]::placeholder {
    border-radius: 5px;
    border: 1px solid rgb(240, 67, 67);
     margin-top: 15px;
-    margin-left: 74px;
+    margin-left: 10px;
 }
 
 #b-o-div-1-star{
@@ -731,7 +745,7 @@ input[type="search"]::placeholder {
    border-radius: 5px;
    border: 1px solid rgb(59, 130, 245);
     margin-top: 15px;
-    margin-left: 85px;
+    margin-left: 10px;
 }
 
 #b-o-div-1-repe{
@@ -739,7 +753,7 @@ input[type="search"]::placeholder {
    border-radius: 5px;
    border: 1px solid rgb(199, 177, 36);
     margin-top: 15px;
-    margin-left: 58px;
+    margin-left: 10px;
 }
 
 #spans-tr{
