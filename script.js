@@ -13,6 +13,28 @@ document.querySelector('.menu-icon').addEventListener('click', function() {
     document.querySelector('.sidebar').classList.toggle('sidebar-open');
 });
 
+// Ana checkbox
+var masterCheckbox = document.getElementById("masterCheckbox");
+
+// Altındaki çocuk checkbox'lar
+var childCheckboxes = document.querySelectorAll(".childCheckbox");
+
+// Ana checkbox değişikliğinde
+masterCheckbox.addEventListener("change", function() {
+    // Ana checkbox işaretlendiğinde
+    if (masterCheckbox.checked) {
+        // Tüm altındaki checkbox'ları işaretle
+        childCheckboxes.forEach(function(checkbox) {
+            checkbox.checked = true;
+        });
+    } else {
+        // Ana checkbox işaretlenmediğinde
+        // Tüm altındaki checkbox'ları işaretsiz bırak
+        childCheckboxes.forEach(function(checkbox) {
+            checkbox.checked = false;
+        });
+    }
+});
 
 
 
