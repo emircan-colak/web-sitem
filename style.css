@@ -160,37 +160,6 @@ input[type="search"]::placeholder {
     color: rgb(109, 109, 117);
 }
 
-@media screen and (max-width:700px) {
-    #fila-font {
-        font-size: 20px;
-        margin-top: 20px;
-        margin-left: 15px;
-    }
-}
-
-@media screen and (max-width:500px) {
-    #search {
-        width: 200px !important;
-    }
-
-    #fila-font {
-        font-size: 20px;
-        margin-top: 20px;
-        margin-left: 15px;
-    }
-}
-
-@media screen and (max-width:450px) {
-    #search {
-        width: 170px !important;
-    }
-
-    #fila-font {
-        font-size: 20px;
-        margin-top: 20px;
-        margin-left: 15px;
-    }
-}
 
 #fila-font {
     font-size: 20px;
@@ -301,50 +270,12 @@ input[type="search"]::placeholder {
     height: 250px;
 }
 
-@media screen and (max-width:1200px) {
-    .first-m-div {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    #first-c-div{
-        width: 100% !important;
-    }
-}
-
-@media screen and (max-width:935px) {
-    #first-c-div {
-        width: 600px !important;
-        margin-bottom: 20px;
-    }
-}
-
-
-@media screen and (max-width:1200px) {
-    #menu {
-        width: 300px;
-        height: 400px;
-    }
-}
-
-
-
 
 .mobile-menu-icon {
     display: none;/
 }
 
 
-@media screen and (max-width: 768px) {
-    .sidebar {
-        display: none !important;
-    }
-
-    .mobile-menu-icon {
-        display: block;
-    }
-
-}
 
 #alt-div {
     display: inline-block;
@@ -358,6 +289,76 @@ input[type="search"]::placeholder {
     overflow-x: auto; /* Yatay kaydırma çubuğunu göster */
     overflow-y: hidden;
 }
+
+
+
+@media screen and (max-width:500px) {
+    #search {
+        width: 200px !important;
+    }
+
+    #fila-font {
+        font-size: 20px;
+        margin-top: 20px;
+        margin-left: 15px;
+    }
+}
+
+@media screen and (max-width:450px) {
+    #search {
+        width: 170px !important;
+    }
+
+    #fila-font {
+        font-size: 20px;
+        margin-top: 20px;
+        margin-left: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        display: none !important;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+}
+
+
+@media screen and (max-width:1200px) {
+    .first-m-div {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #first-c-div{
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width:1367px) {
+    #first-c-div{
+        width: 1030px !important;
+    }
+    #alt-div{
+        width: 1010px;
+    }
+    #huni-btn{
+        margin-left: 20px;
+        margin-top: 3px;
+    }
+    #columns-btn{
+        margin-top: 2px;
+    }
+    #th-0{
+        width: 1180px;
+    }
+}
+
+
 
 @media screen and (max-width: 1300px) {
     #alt-div{
@@ -390,6 +391,26 @@ input[type="search"]::placeholder {
     #search-2{
        float: left !important;
        
+    }
+    #menu {
+        width: 300px;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width:935px) {
+    #first-c-div {
+        width: 530px !important;
+        margin-bottom: 20px;
+    }
+
+    #alt-div{
+        width: 530px;
+    }
+
+    #huni-btn{
+        margin-left: 30px;
+        margin-top: 3px;
     }
 }
 
@@ -435,6 +456,14 @@ input[type="search"]::placeholder {
     }
     #alt-div{
         width: 650px;
+    }
+}
+
+@media screen and (max-width:700px) {
+    #fila-font {
+        font-size: 20px;
+        margin-top: 20px;
+        margin-left: 15px;
     }
 }
 
@@ -640,7 +669,7 @@ input[type="search"]::placeholder {
     float: right;
     border: 1px solid rgb(71, 71, 74);
     border-radius: 0 10px 10px 0;
-    margin-right: 30px;
+    margin-right: 0px;
     margin-top: 8px;
     border-left: none;
 }
@@ -691,6 +720,11 @@ input[type="search"]::placeholder {
     float: right;
 }
 
+#huni-btn{
+    width: 50px;
+    margin-top: 2px;
+}
+
 .hubi-btn:hover {
     color: white;
 }
@@ -724,6 +758,12 @@ input[type="search"]::placeholder {
     cursor: pointer;
     transition: box-shadow 0.3s;
     margin-left: 15px;
+}
+
+#columns-btn{
+    width: 50px;
+    margin-top: 2px;
+    
 }
 
 .th-0{
@@ -1052,3 +1092,6 @@ input[type="checkbox"]:checked::after{
     margin-left: 85px;
 }
 
+.pencil{
+    color: rgb(250, 189, 35);
+}
